@@ -65,4 +65,12 @@ ages = [10,15,20,25,30]
 
 namesAndAges = zip names ages
 
+main = do
+    putStrLn "Wagwan my G wys?"
+    name <- getLine
+    putStrLn ("Wagwan " ++ name)
+
+
+
+
 
