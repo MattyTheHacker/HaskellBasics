@@ -23,6 +23,33 @@ factorial x = x * factorial (x - 1)
 prodFactorial x = product [1..x]
 
 
+batAvgRating :: Double -> Double -> String
+batAvgRating hits atBats
+    | avg <= 0.200 = "Awful"
+    | avg <= 0.250 = "Reasonable"
+    | avg <= 0.280 = "Pretty Good"
+    | otherwise = "Great Work!"
+    where avg = hits / atBats
+
+getListItems :: [Int] -> String
+getListItems [] = "[WARN] List was empty."
+getListItems (x:[]) = "Your list begins with: " ++ show x
+getListItems (x:y:[]) = "Your list contains: " ++ show x ++ " and " ++ show y
+getListItems (x:xs) = "The first item is " ++ show x ++ " and the rest are: " ++ show xs
+
+getFirstItem :: String -> String
+getFirstItem [] = "[WARN] Empty String!"
+getFirstItem all@(x:xs) = "The first letter in " ++ all ++ " is " ++ [x]
+
+timesFour :: Int -> Int
+timesFour x = x * 4
+
+listTimesFour = map timesFour [1,2,3,4,5]
+
+multByFour :: [Int] -> [Int]
+multByFour [] = []
+multByFour (x:xs) = timesFour x : multByFour xs
+
 
 
 
