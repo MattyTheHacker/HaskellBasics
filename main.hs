@@ -50,6 +50,10 @@ evensToTwenty = takeWhile (<= 20) [2,4..]
 
 multOfList = foldl (*) 1 [2,3,4,5]
 
+powThreeList = [3^n | n <- [1..10]]
+
+multiTable = [[x * y | y <- [1..10]] | x <- [1..10]]
+
 
 
 
