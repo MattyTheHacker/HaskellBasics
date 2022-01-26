@@ -45,14 +45,30 @@ timesFour :: Int -> Int
 timesFour x = x * 4
 
 listTimesFour = map timesFour [1,2,3,4,5]
-
+-- these two do the same thing
 multByFour :: [Int] -> [Int]
 multByFour [] = []
 multByFour (x:xs) = timesFour x : multByFour xs
 
 
+areStrEq :: [Char] -> [Char] -> Bool
+areStrEq [] [] = True
+areStrEq (x:xs) (y:ys) = x == y && areStrEq xs ys
+areStrEq _ _ = False
 
 
+doMulti :: (Int -> Int) -> Int
+doMulti func = func 3
+numThreeTimesFour = doMulti timesFour
+
+getAddFunction :: Int -> (Int -> Int)
+getAddFunction x y = x + y
+addsThree = getAddFunction 3
+fourPlusThree = addsThree 4
+threePlusList = map addsThree [1,2,3,4,5]
+
+
+doubleOneToTen = map (\x -> x * 2) [1..10]
 
 
 
