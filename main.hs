@@ -54,6 +54,15 @@ powThreeList = [3^n | n <- [1..10]]
 
 multiTable = [[x * y | y <- [1..10]] | x <- [1..10]]
 
+randTuple = (1,"Random Tuple")
+bobSmith = ("Bob Smith", 52)
 
+bobsName = fst bobSmith
+bobsAge = snd bobSmith
+
+names = ["Bob", "John", "Alex", "Leaf", "Sofia"]
+ages = [10,15,20,25,30]
+
+namesAndAges = zip names ages
 
 
