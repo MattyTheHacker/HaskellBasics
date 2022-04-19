@@ -69,9 +69,17 @@ threePlusList = map addsThree [1,2,3,4,5]
 
 
 doubleOneToTen = map (\x -> x * 2) [1..10]
+doubleOneToTenBetter = map (* 2) [1..10]
+
 
 doubleEvenNumber y =
     if (y `mod` 2 /= 0)
+        then y
+        else y * 2
+
+-- new lines/indents don't make a difference, this could all be one line
+doubleEvenNumberBetter y =
+    if odd y
         then y
         else y * 2
 
