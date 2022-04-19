@@ -9,6 +9,10 @@ data BaseballPlayer = Pitcher
 
 barryBonds :: BaseballPlayer -> Bool
 barryBonds Outfield = True
+barryBonds Pitcher = False
+barryBonds Infielder = False
+barryBonds Catcher = False
+
 
 barryInOf = print(barryBonds Outfield)
 
@@ -45,7 +49,8 @@ area (Rectangle x y x2 y2) = (abs (x2 - x)) * (abs (y2 - y))
 
 sumValue = putStrLn (show (1 + 2))
 sumValue2 = putStrLn . show $ 1 + 2
--- these do the same thing
+sumValue3 = print (1 + 2)
+-- these all do the same thing
 
 areaOfCircle = area (Circle 50 60 20)
 areaOfRect = area $ Rectangle 10 10 100 100
