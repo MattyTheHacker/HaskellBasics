@@ -1,4 +1,5 @@
-list = 1 : 2 : 3 : 4 : 5 : []
+list :: [Integer]
+list = [1, 2, 3, 4, 5]
 
 
 -- generates a list of ascening ints, between two values inclusive
@@ -13,20 +14,25 @@ ascendingList n m
 -- general list shit
 -- gets the first element in the list
 -- returns 1
+firstElement :: Integer
 firstElement = head list
 
 -- gets everyting except the first element in the list
 -- returns [2,3,4,5]
+tailElements :: [Integer]
 tailElements = tail list
 
 -- gets the length of the list
 -- returns 5
+elementsLength :: Int
 elementsLength = length list
 
 -- gets all but the last element
 -- returns [1,2,3,4]
+allButLast :: [Integer]
 allButLast = init list
 
 -- gets if the list is empty or not
 -- returns False
+isEmpty :: Bool
 isEmpty = null list
